@@ -34,7 +34,7 @@ def update
   @review = Review.find(params[:id])
   if @review.update(review_params)
     flash[:notice] = "Review successfully updated!"
-    redirect_to product_path(@review.album)
+    redirect_to product_path(@review.product)
   else
     @product = Product.find(params[:product_id])
     render :edit
@@ -42,12 +42,11 @@ def update
 end
 
 def destroy
-  @review = Reivew.find(params[:id])
+  @review = Review.find(params[:id])
   @review.destroy
   flash[:notice] = "Review successfully deleted!"
-  redirect_to review_path(@review.product)
+  redirect_to products_path
 end
-# Other controller actions go here.
 
 private
   def review_params

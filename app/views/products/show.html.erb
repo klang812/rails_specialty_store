@@ -16,7 +16,7 @@
   <p>No reviews are listed for this product.</p>
 <% end %>
 
-<p><%= link_to "Add a review", new_product_reivew_path(@product) %></p>
+<p><%= link_to "Add a review", new_product_review_path(@product) %></p>
 
 <p><%= link_to "Edit", edit_product_path(@product) %></p>
 <p><%= link_to "Delete product", product_path(@product), :data => {:confirm => "Are you sure?", :method => "delete"} %></p>

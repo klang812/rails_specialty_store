@@ -2,9 +2,9 @@
 <h2>Review: <%= @review.author %></h2>
 <p>Product Rating: <%= @review.rating %></p>
 
-<h3><%= @review.contect_body %></h3>
+<h3><%= @review.content_body %></h3>
 
 <p><%= link_to "Edit review", edit_product_review_path(@product, @review) %></p>
-<p><%= link_to "Delete review", album_song_path(@product, @review), :data => {:confirm => "Are you sure?", :method => "delete"} %></p>
+<p><%= link_to "Delete review", product_review_path(@product, @review), :data => {:confirm => "Are you sure?", :method => "delete"} %></p>
 
-<p><%= link_to "Return to product", album_path(@product) %></p>
+<p><%= link_to "Return to product", product_path(@product) %></p>
