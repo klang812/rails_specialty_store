@@ -13,4 +13,10 @@ describe "the add product process" do
     expect(page).to have_content 'Product successfully added!'
     expect(page).to have_content 'Spaghetti'
   end
+
+  it "gives an error when no name is entered" do
+    visit new_product_path
+    click_on 'Create Product'
+    expect(page).to have_content "Name can't be blank"
+  end
 end
