@@ -2,18 +2,21 @@ class ProductsController < ApplicationController
 
 def index
   @products = Product.all
+  @reviews = Review.all
   render :index
 end
 
 def new
   @product = Product.new
+  @reviews = Review.all
   render :new
 end
 
 def create
-  @product = Product.new(album_params)
+  @product = Product.new(product_params)
+  @reviews = Review.all
   if @product.save
-    flash[:notice] = "Album successfully added!"
+    flash[:notice] = "Product successfully added!"
     redirect_to products_path
   else
     render :new
@@ -33,6 +36,7 @@ end
 def update
   @product= Product.find(params[:id])
   if @product.update(product_params)
+    flash[:notice] = "Product successfully updated!"
     redirect_to products_path
   else
     render :edit
@@ -42,6 +46,7 @@ end
 def destroy
   @product = Product.find(params[:id])
   @product.destroy
+  flash[:notice] = "Product successfully deleted!"
   redirect_to products_path
 end
 

@@ -11,6 +11,7 @@ def create
   @product = Product.find(params[:product_id])
   @review = @product.reviews.new(review_params)
   if @review.save
+    flash[:notice] = "Category successfully added!"
     redirect_to product_path(@product)
   else
     render :new
@@ -32,6 +33,7 @@ end
 def update
   @review = Review.find(params[:id])
   if @review.update(review_params)
+    flash[:notice] = "Review successfully updated!"
     redirect_to product_path(@review.album)
   else
     @product = Product.find(params[:product_id])
@@ -42,6 +44,7 @@ end
 def destroy
   @review = Reivew.find(params[:id])
   @review.destroy
+  flash[:notice] = "Review successfully deleted!"
   redirect_to review_path(@review.product)
 end
 # Other controller actions go here.

@@ -5,10 +5,10 @@ class Review < ApplicationRecord
   validates :content_body, minimum: 50, maximum: 250
   validates :rating, true
   
-  before_save(:titleize_album)
+  before_save(:titleize_review, presence: author)
 
   private
-    def titleize_product
+    def titleize_review
       self.name = self.name.titleize
     end
   end
