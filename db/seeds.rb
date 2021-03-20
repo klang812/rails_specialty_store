@@ -10,12 +10,12 @@ require 'faker'
 Product.destroy_all
 Review.destroy_all
 
-50.times do 
+50.times do |index|
   Product.create!(name: Faker::Food.vegetables,
                         cost: Faker::Commerce.price(range: 0..10.0, as_string: true),  
                         country_of_origin: Faker::Address.country)
-  5.times do 
-    Review.create!(author: Faker::Book.author, content_body: Faker::Lorem.sentence(word_count:10), rating: Faker::Number.between(from: 1, to: 5))
+  5.times do |index|
+    Review.create!(author: Faker::Book.author, content_body: Faker::Lorem.paragraph(sentence_count: 4, random_sentences_to_add: 2), rating: Faker::Number.between(from: 1, to: 5), product_id: product.id)
   end
 end
 

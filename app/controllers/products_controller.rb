@@ -7,13 +7,11 @@ end
 
 def new
   @product = Product.new
-  @reviews = Review.all
   render :new
 end
 
 def create
   @product = Product.new(product_params)
-  @reviews = Review.all
   if @product.save
     flash[:notice] = "Product successfully added!"
     redirect_to products_path

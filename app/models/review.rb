@@ -7,12 +7,7 @@ class Review < ApplicationRecord
   validates :rating, presence: true
   validates :rating, :inclusion => 1..5
 
-  # before_save(:titleize_review, presence: author)
-
-  # private
-  #   def titleize_review
-  #     self.author = self.author.titleize
-  #   end
+  
   end
   
   
