@@ -11,7 +11,7 @@ Product.destroy_all
 Review.destroy_all
 
 50.times do |index|
-  Product.create!(name: Faker::Food.vegetables,
+ product = Product.create!(name: Faker::Food.vegetables,
                         cost: Faker::Commerce.price(range: 0..10.0, as_string: true),  
                         country_of_origin: Faker::Address.country)
   5.times do |index|
@@ -19,4 +19,4 @@ Review.destroy_all
   end
 end
 
-p "Created #{Vegetables.count} products and #{Commerce.count} reviews."
+p "Created #{Product.count} products and #{Review.count} reviews."

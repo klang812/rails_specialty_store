@@ -4,7 +4,7 @@
 #   it "adds a new review" do
 #     product = Product.new({:name => 'Spaghetti', :cost => '6', :country_of_origin => 'USA'})
 #     product.save
-#     visit reviews_path
+#     visit product_reviews_path
 #     click_link 'Add a review'
 #     fill_in 'Author', :with => 'Kerry'
 #     fill_in 'Content body', :with => '123456789101112131415161718192021222324252627282930'
