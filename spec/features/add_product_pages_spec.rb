@@ -7,7 +7,7 @@ describe "the add product process" do
     visit products_path
     click_link 'Create new product'
     fill_in 'Name', :with => 'Spaghetti'
-    fill_in 'Cost', :with => '6'
+    fill_in 'Cost', :with => 6
     fill_in 'Country of origin', :with => 'USA'
     click_on 'Create Product'
     expect(page).to have_content 'Product successfully added!'
