@@ -15,7 +15,7 @@ Review.destroy_all
                         cost: Faker::Commerce.price(range: 0..10.0, as_string: true),  
                         country_of_origin: Faker::Address.country)
   5.times do |index|
-    Review.create!(author: Faker::Book.author, content_body: Faker::Lorem.paragraph(sentence_count: 4, random_sentences_to_add: 2), rating: Faker::Number.between(from: 1, to: 5), product_id: product.id)
+    Review.create!(author: Faker::Book.author, review: Faker::Lorem.paragraph(sentence_count: 4, random_sentences_to_add: 2), rating: Faker::Number.between(from: 1, to: 5), product_id: product.id)
   end
 end
 

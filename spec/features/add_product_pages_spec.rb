@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe "the add product process" do
   it "adds a new product" do
-    review = Review.new({:author => 'Kerry', :content_body => '123456789101112131415161718192021222324252627282930', :rating => 5})
+    review = Review.new({:author => 'Kerry', :review => 'This spaghetti cooks perfectly al dente and with a bit of salt are delicious!', :rating => 5})
     review.save
     visit products_path
     click_link 'Create new product'
