@@ -4,6 +4,7 @@ describe Product do
   it{ should have_many(:reviews) }
   it{ should validate_presence_of(:name) }
   it{ should validate_presence_of(:cost) }
+  it{ should validate_presence_of(:country_of_origin) }
 
   it("titleizes the name of a product and country of origin") do
     product = Product.create({name: "cookies", cost: 5, country_of_origin: "united states"})
