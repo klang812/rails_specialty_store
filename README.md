@@ -60,7 +60,7 @@ Clone the repo:
 > `$ db:test:prepare`<br>
 > `$ db:seed`
 
-* After set up please open the local version on your browser, `$ rails s`.  To open on your browser you will need to navigate to `http://localhost.3000/`.
+* After set up please open the local version on your browser, `$ rails s`.  To open on your browser you will need to navigate to `http://localhost:3000/`.
 
 
 Testing:
