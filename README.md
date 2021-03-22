@@ -55,9 +55,9 @@ Clone the repo:
   `$ bundle install`
 
 * You will need to use rails to set up the database on Postgres by running the following commands:
-> `$ rake db:create`
-> `$ rake db:migrate`
-> `$ db:test:prepare`
+> `$ rake db:create`<br>
+> `$ rake db:migrate`<br>
+> `$ db:test:prepare`<br>
 > `$ db:seed`
 
 * After set up please open the local version on your browser, `$ rails s`.  To open on your browser you will need to navigate to `http://localhost.3000/`.
@@ -79,4 +79,4 @@ Copyright (c) 2021 **_Kerry Lang_**
 
 ## Contact Information
 * Reach Kerry: via <a href="https://www.linkedin.com/in/klang812/" target="_blank">LinkedIn</a> or <a href="mailto:klang812@gmail.com" target="_blank">Email</a>.<br>
-Checkout Kerry's <a href="https://github.com/klang812" target="_blank">GitHub profile</a>.</li>
+* Checkout Kerry's <a href="https://github.com/klang812" target="_blank">GitHub profile</a>.</li>
