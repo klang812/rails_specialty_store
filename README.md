@@ -54,6 +54,15 @@ Clone the repo:
 * Install all application dependencies using `Bundler`.  This will install all packages listed in the `Gemfile`.
   `$ bundle install`
 
+* You will need to use rails to set up the database on Postgres by running the following commands:
+> `$ rake db:create`
+> `$ rake db:migrate`
+> `$ db:test:prepare`
+> `$ db:seed`
+
+* After set up please open the local version on your browser, `$ rails s`.  To open on your browser you will need to navigate to `http://localhost.3000/`.
+
+
 Testing:
 * This is a testing project utilizing Test-Driven Development (TDD).
 * Using the test command `$ rspec` you will be able to test the program yourself and verify its functionality.
