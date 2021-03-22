@@ -11,7 +11,7 @@ describe 'the edit review process' do
       fill_in 'Review', :with => 'This spaghetti cooks perfectly al dente and with a bit of salt is delicious!'
       click_on 'Update Review'
       expect(page).to have_content 'Review successfully updated'
-      # expect(page).to have_content 'This spaghetti cooks perfectly al dente and with a bit of salt is delicious!'
+      expect(page).to have_content 'Kerry'
     end
 
     it "gives an error when no author is entered" do

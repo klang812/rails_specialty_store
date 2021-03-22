@@ -14,7 +14,7 @@ describe 'the add review process' do
     fill_in 'Rating', :with => 5
     click_on 'Create Review'
     expect(page).to have_content 'Review successfully added!'
-    # expect(page).to have_content 'This spaghetti cooks perfectly al dente and with a bit of salt are delicious!'
+    expect(page).to have_content 'Kerry'
   end
 
   it "gives an error when no author is entered" do
