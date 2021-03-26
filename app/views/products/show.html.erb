@@ -17,12 +17,13 @@
 <% end %>
 
 <p><%= link_to "Add a review", new_product_review_path(@product) %></p>
+<p><%= link_to "Return to products", products_path %></p>
+
 <% if is_admin? %>
   <%= link_to "Edit product", edit_product_path(@product) %>
 <% end %><br><br>
 
 <% if is_admin? %>
   <%= link_to "Delete product", product_path(@product), :data => {:confirm => "Are you sure?", :method => "delete"} %>
-<% end %><br><br>
+<% end %>
 
-<p><%= link_to "Return to products", products_path %></p>
