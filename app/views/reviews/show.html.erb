@@ -4,6 +4,7 @@
 
 <h3><%= @review.review %></h3>
 
+
 <p><%= link_to "Edit review", edit_product_review_path(@product, @review) %></p>
 <p><%= link_to "Delete review", product_review_path(@product, @review), :data => {:confirm => "Are you sure?", :method => "delete"} %></p>
 
