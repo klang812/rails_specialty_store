@@ -1,6 +1,16 @@
 require 'rails_helper'
 
+
 describe "the add product process" do
+  before(:each) do
+    User.destroy_all
+    user = User.create!(:email => 'test1@example.com', :password => 'f4k3p455w0rd', :admin => true)
+    login_as(user, :scope => :user)
+  end
+  after(:each) do 
+    Warden.test_reset!
+  end
+  
   it "adds a new product" do
     review = Review.new({:author => 'Kerry', :review => 'This spaghetti cooks perfectly al dente and with a bit of salt are delicious!', :rating => 5})
     review.save
