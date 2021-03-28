@@ -10,6 +10,17 @@
   <p>There are no products yet.</p>
 <% end %>
 
+<% if @lowest_prices.any? %>
+  <ul>
+    <% @lowest_prices.each do |lowest_price| %>
+      <li><%= link_to lowest_price.name, product_path(lowest_price) %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>There are no products yet.</p>
+<% end %>
+
+
 <% if is_admin? %>
   <%= link_to "Create new product", new_product_path %>
 <% end %>

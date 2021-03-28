@@ -6,6 +6,7 @@ class Review < ApplicationRecord
   validates_length_of :review, maximum: 250
   validates :rating, presence: true
   validates :rating, :inclusion => 1..5
+
 end
   
   
