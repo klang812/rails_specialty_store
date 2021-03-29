@@ -10,6 +10,11 @@ def index
   render :index
 end
 
+def search
+  @q = "%#{params[:q].downcase}%"
+  @products_search = Product.where("LOWER(name) LIKE ?", @q)
+end
+
 def new
   @product = Product.new
   render :new
