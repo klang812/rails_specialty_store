@@ -1,5 +1,5 @@
 <h1><%= @product.name %></h1>
-<h3><%= @product.cost %></h3>
+<h3>$<%= @product.cost %></h3>
 <h4><%= @product.country_of_origin %></h4>
 
 <% if @product.reviews.any? %>
@@ -8,7 +8,9 @@
   <% @product.reviews.each do |review| %>
     <ul>
       <li>
-        <%= link_to review.author, product_review_path(@product, review) %>
+        <%= link_to review.review, product_review_path(@product, review) %><br>
+        Rating: <%= review.rating %><br>
+        <%= review.author %>
       </li>
     </ul>
   <% end %>
