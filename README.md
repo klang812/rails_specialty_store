@@ -67,8 +67,8 @@ Clone the repo:
 > `$ rails console`<br>
 > `user = User.last`<br>
 > `user.admin = true`<br>
-> `user.password_hash = "[enter your password here]"
-> `user.save`
+> `user.password_hash = "[enter your password here]"`<br>
+> `user.save`<br>
 > `exit`
 
 
