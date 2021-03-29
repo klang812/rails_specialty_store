@@ -62,6 +62,15 @@ Clone the repo:
 
 * After set up please open the local version on your browser, `$ rails s`.  To open on your browser you will need to navigate to `http://localhost:3000/`.
 
+* In order for you to get access to the site, you will need to sign up and set your account to an admin.  The first step is set up your accout and then access the rails console via the terminal.  Please follow the instructions below:
+
+> `$ rails console`<br>
+> `user = User.last`<br>
+> `user.admin = true`<br>
+> `user.password_hash = "[enter your password here]"
+> `user.save`
+> `exit`
+
 
 Testing:
 * This is a testing project utilizing Test-Driven Development (TDD).
