@@ -6,7 +6,8 @@ class Product < ApplicationRecord
 
   scope :highest_rated, -> (rating = 1) { where("rating = ?", rating).joins(:reviews).limit(5)}
   scope :lowest_price, -> (price = 1) {where("cost = ?", price).limit(5)}
-  
+  scope :new_products, -> {order(created_at: :desc).limit(5)} 
+
   before_save(:titleize_product)
 
   private

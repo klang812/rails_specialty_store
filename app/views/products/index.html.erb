@@ -1,5 +1,6 @@
 <h1>Products</h1>
 
+<h3>Here are some of out most popular products!</h3>
 <% if @rated_products.any? %>
   <ul>
     <% @rated_products.each do |product| %>
@@ -10,6 +11,7 @@
   <p>There are no products yet.</p>
 <% end %>
 
+<h3>If you're looking for a deal here are some for only $1!</h3>
 <% if @lowest_prices.any? %>
   <ul>
     <% @lowest_prices.each do |lowest_price| %>
@@ -20,6 +22,7 @@
   <p>There are no products yet.</p>
 <% end %>
 
+<h3>Enjoy some of the newest items in our store!</h3>
 <% if @products.any? %>
   <ul>
     <% @products.each do |product| %>

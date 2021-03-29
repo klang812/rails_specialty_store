@@ -5,7 +5,7 @@ before_action :only => [:new, :edit, :update, :destroy] do
 end
 
 def index
-  @products = Product.all
+  @products = Product.new_products
   @rated_products = Product.highest_rated
   @lowest_prices = Product.lowest_price
   render :index
