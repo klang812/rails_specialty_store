@@ -26,7 +26,6 @@
           <ul class="nav navbar-nav">
             <li class="active"><a href="/">Home<span class="sr-only">(current)</span></a></li>
             <li><a href="/products">Products</a></li>
-            <%# <li><a href="/tags">Reviews</a></li> %>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <% if user_signed_in? %>
@@ -39,11 +38,11 @@
             <% end %>
           </ul>
           
-          <form class="navbar-form navbar-right">
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Search">
-            </div>
-            <button type="submit" class="btn btn-default">Submit</button>
+          <form class="navbar-form navbar-right" action="/search">
+            
+              <input type="text" class="form-control" name="q" placeholder="Search">
+              <button type="submit" class="btn btn-default">Search</button>
+        
           </form>
         </div>
       </div>
