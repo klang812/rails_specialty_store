@@ -1,8 +1,8 @@
 <h1>Products</h1>
 
-<% if @products.any? %>
+<% if @rated_products.any? %>
   <ul>
-    <% @products.each do |product| %>
+    <% @rated_products.each do |product| %>
       <li><%= link_to product.name, product_path(product) %></li>
     <% end %>
   </ul>
@@ -14,6 +14,16 @@
   <ul>
     <% @lowest_prices.each do |lowest_price| %>
       <li><%= link_to lowest_price.name, product_path(lowest_price) %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>There are no products yet.</p>
+<% end %>
+
+<% if @products.any? %>
+  <ul>
+    <% @products.each do |product| %>
+      <li><%= link_to product.name, product_path(product) %></li>
     <% end %>
   </ul>
 <% else %>
